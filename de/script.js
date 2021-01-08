@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-08T15:09:42+01:00
+ * @Last modified time: 2021-01-08T22:03:54+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -77,28 +77,28 @@ var prompts = [
 // The stronger agreeance/disagreeance, the higher the weight on the user's answer to the prompt.
 var prompt_values = [
 {
-	value: 'Sehr wichtig',
-	class: 'btn-default btn-strongly-agree',
+	value: 'Sehr relevant',
+	class: 'btn-default btn-strongly-agree border-success rounded',
 	weight: 5
 },
 {
-	value: 'Wichtig',
-	class: 'btn-default btn-agree',
+	value: 'Relevant',
+	class: 'btn-default btn-agree border-success rounded',
 	weight: 3,
 },
 {
 	value: 'Neutral',
-	class: 'btn-default',
+	class: 'btn-default btn-neutral border-secondary rounded',
 	weight: 0
 },
 {
-	value: 'Weniger Wichtig',
-	class: 'btn-default btn-disagree',
+	value: 'Irrellevant',
+	class: 'btn-default btn-disagree border-danger rounded',
 	weight: -3
 },
 {
-	value: 'Absoult unwichtig',
-	class: 'btn-default btn-strongly-disagree',
+	value: 'Sehr Irrellevant',
+	class: 'btn-default btn-strongly-disagree border-danger rounded',
 	weight: -5
 }
 ]
