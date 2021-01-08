@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-08T22:03:54+01:00
+ * @Last modified time: 2021-01-08T22:05:55+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -97,7 +97,7 @@ var prompt_values = [
 	weight: -3
 },
 {
-	value: 'Sehr Irrellevant',
+	value: 'Sehr irrellevant',
 	class: 'btn-default btn-strongly-disagree border-danger rounded',
 	weight: -5
 }
