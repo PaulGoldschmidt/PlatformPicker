@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-08T10:34:10+01:00
+ * @Last modified time: 2021-01-08T15:10:01+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -83,11 +83,11 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 }
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .show {
-	display: block;
+	display: block !important;
 }
 
 /* RESULTS */
