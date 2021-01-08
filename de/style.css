@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-08T15:10:01+01:00
+ * @Last modified time: 2021-01-08T16:12:01+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -10,7 +10,6 @@ div.container.text-center li {
 
 html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz.list-group li.list-group-item.prompt div.btn-group.btn-group-justified * {
 	color: black; /* Changes the color of the button text*/
-	background-color: white;
 }
 
 .prompt {
@@ -24,7 +23,7 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 }
 
 .btn-strongly-agree {
-	color: #89d298;
+	color: #89d298 !important;
 	font-weight: bold;
 }
 
@@ -35,11 +34,11 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 .btn-strongly-agree.active:focus,
 .btn-strongly-agree:hover
  {
-	background-color: #89d298;
+	background-color: #89d298 !important;
 }
 
 .btn-agree {
-	color: #89d298;
+	color: #89d298 !important;
 }
 
 .btn-agree.active,
@@ -48,11 +47,11 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 .btn-agree:active:focus,
 .btn-agree.active:focus,
 .btn-agree:hover {
-	background-color: rgba(137, 210, 152, 0.5);
+	background-color: rgba(137, 210, 152, 0.5) !important;
 }
 
 .btn-disagree {
-	color: #e28181;
+	color: #e28181 !important;
 }
 
 .btn-disagree.active,
@@ -61,11 +60,11 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 .btn-disagree:active:focus,
 .btn-disagree.active:focus,
 .btn-disagree:hover {
-	background-color: rgba(226, 129, 129, 0.5);
+	background-color: rgba(226, 129, 129, 0.5) !important;
 }
 
 .btn-strongly-disagree {
-	color: #e28181;
+	color: #e28181 !important;
 	font-weight: bold;
 }
 
@@ -75,7 +74,7 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 .btn-strongly-disagree:active:focus,
 .btn-strongly-disagree.active:focus,
 .btn-strongly-disagree:hover {
-	background-color: #e28181;
+	background-color: #e28181 !important;
 }
 
 .bottom {
