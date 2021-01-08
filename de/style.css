@@ -1,18 +1,16 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-07T22:27:21+01:00
+ * @Last modified time: 2021-01-08T10:34:10+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
-* {
-	font-size: 20px;
-}
 
 div.container.text-center li {
 	background-color: #212529;
 }
 
 html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz.list-group li.list-group-item.prompt div.btn-group.btn-group-justified * {
-	color: white; /* Changes the color of the button text*/
+	color: black; /* Changes the color of the button text*/
+	background-color: white;
 }
 
 .prompt {
