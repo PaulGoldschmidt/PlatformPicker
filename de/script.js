@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-13T20:17:57+01:00
+ * @Last modified time: 2021-01-13T20:40:12+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -12,32 +12,32 @@
 var prompts = [
 {
 	prompt: 'Ein niedriger Preis ist für das Projekt ist',
-	weight: -1,
+	weight: 1,
 	class: 'group0'
 },
 {
 	prompt: 'Dass die Plattform einsteigerfreundlich (z.B. gute Dokumentation, einfach zu erlernende Programmiersprache) ist, ist',
-	weight: -1,
+	weight: 1,
 	class: 'group1'
 },
 {
 	prompt: 'Das eine grafische Ausgabe über einen Monitor/Fernseher/Beamer realisiert werden kann, ist',
-	weight: -1,
+	weight: 1,
 	class: 'group2'
 },
 {
 	prompt: 'Das Projekt benötigt viel Speicherplatz (Arbeitsspeicher und Programmspeicher) für Programme und Grafiken',
-	weight: -1,
+	weight: 1,
 	class: 'group3'
 },
 {
 	prompt: 'Die Größe des Entwicklungsboards ist',
-	weight: -1,
+	weight: 1,
 	class: 'group4'
 },
 {
 	prompt: 'Viele (analoge- und/oder digitale-) Ein- und Ausgänge sind für das Projekt:',
-	weight: -1,
+	weight: 1,
 	class: 'group5'
 },
 {
@@ -70,7 +70,6 @@ var prompts = [
 	weight: 1,
 	class: 'group11'
 }
-
 ]
 
 // This array stores the values which can get answered
@@ -227,33 +226,12 @@ $('#submit-btn').click(function () {
 	$('.results').removeClass('hide');
 	$('.results').addClass('show');
 
-	if(total < 0) {
-		// document.getElementById('intro-bar').style.width = ((total / 60) * 100) + '%';
-		// console.log(document.getElementById('intro-bar').style.width);
-		// document.getElementById('intro-bar').innerHTML= ((total / 60) * 100) + '%';
-		document.getElementById('results').innerHTML = '<b>You are introverted!</b><br><br>\
-		Introverts are tricky to understand, since it’s so easy for us to assume that introversion is the same as being shy, when, in fact, introverts are simply people who find it tiring to be around other people.\n\
-<br><br>\
-I love this explanation of an introvert’s need to be alone:\n\
-<br><br>\
-For introverts, to be alone with our thoughts is as restorative as sleeping, as nourishing as eating.\n\n\
-<br><br>\
-Introverted people are known for thinking things through before they speak, enjoying small, close groups of friends and one-on-one time, needing time alone to recharge, and being upset by unexpected changes or last-minute surprises. Introverts are not necessarily shy and may not even avoid social situations, but they will definitely need some time alone or just with close friends or family after spending time in a big crowd.\
-		';
-	} else if(total > 0) {
-		document.getElementById('results').innerHTML = '<b>You are extroverted!</b><br><br>\
-		On the opposite side of the coin, people who are extroverted are energized by people. They usually enjoy spending time with others, as this is how they recharge from time spent alone focusing or working hard.\
-<br><br>\
-I like how this extrovert explains the way he/she gains energy from being around other people:\
-<br><br>\
-When I am among people, I make eye contact, smile, maybe chat if there’s an opportunity (like being stuck in a long grocery store line). As an extrovert, that’s a small ‘ping’ of energy, a little positive moment in the day.';
+	if (total < 0) {
+		window.document.location.href = "boards/arduino/nano";
+	} else if (total > 0) {
+		window.document.location.href = "boards/arduino/nano";
 	} else {
-		document.getElementById('results').innerHTML = '<b>You are ambiverted!</b><br><br>\
-		Since introverts and extroverts are the extremes of the scale, the rest of us fall somewhere in the middle. Many of us lean one way or the other, but there are some who are quite balanced between the two tendencies. These people are called ambiverts.\
-<br><br>\
-So let’s look at how an ambivert compares.\
-<br><br>\
-Ambiverts exhibit both extroverted and introverted tendencies. This means that they generally enjoy being around people, but after a long time this will start to drain them. Similarly, they enjoy solitude and quiet, but not for too long. Ambiverts recharge their energy levels with a mixture of social interaction and alone time.'
+		window.document.location.href = "boards/arduino/nano";
 	}
 
 	// Hide the quiz after they submit their results
