@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-09T14:52:14+01:00
+ * @Last modified time: 2021-01-13T20:17:57+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -11,62 +11,62 @@
 // The questions which should be answered; theoretically we could outsource the data to a JSON-File, but for so little questions it is not a problem to store them completly here
 var prompts = [
 {
-	prompt: 'I find it difficult to introduce myself to people',
+	prompt: 'Ein niedriger Preis ist für das Projekt ist',
 	weight: -1,
 	class: 'group0'
 },
 {
-	prompt: 'I get so lost in my thoughts I ignore or forget my surroundings',
+	prompt: 'Dass die Plattform einsteigerfreundlich (z.B. gute Dokumentation, einfach zu erlernende Programmiersprache) ist, ist',
 	weight: -1,
 	class: 'group1'
 },
 {
-	prompt: 'I do not usually initiate conversations',
+	prompt: 'Das eine grafische Ausgabe über einen Monitor/Fernseher/Beamer realisiert werden kann, ist',
 	weight: -1,
 	class: 'group2'
 },
 {
-	prompt: 'I prefer not to engage with people who seem angry or upset',
+	prompt: 'Das Projekt benötigt viel Speicherplatz (Arbeitsspeicher und Programmspeicher) für Programme und Grafiken',
 	weight: -1,
 	class: 'group3'
 },
 {
-	prompt: 'I choose my friends carefully',
+	prompt: 'Die Größe des Entwicklungsboards ist',
 	weight: -1,
 	class: 'group4'
 },
 {
-	prompt: 'I find it difficult to tell stories about myself',
+	prompt: 'Viele (analoge- und/oder digitale-) Ein- und Ausgänge sind für das Projekt:',
 	weight: -1,
 	class: 'group5'
 },
 {
-	prompt: 'I am usually highly motivated and energetic',
+	prompt: 'Eine hohe analoge Auflösung der analogen Eingänge ist für das Projekt:',
 	weight: 1,
 	class: 'group6'
 },
 {
-	prompt: 'I find it easy to walk up to a group of people and join in conversation',
+	prompt: 'Eine Kamera muss an das Projekt angeschlossen werden:',
 	weight: 1,
 	class: 'group7'
 },
 {
-	prompt: 'Being adaptable is more important than being organized',
+	prompt: 'Internetfunktionalität ist für das Projekt',
 	weight: 1,
 	class: 'group8'
 },
 {
-	prompt: 'I care more about making sure no one gets upset than winning a debate',
+	prompt: 'Das Board sollte Breadboardkompatibel sein',
 	weight: 1,
 	class: 'group9'
 },
 {
-	prompt: 'I often do not feel I have to justify myself to people',
+	prompt: 'Das Board sollte möglichst Open-Source sein:',
 	weight: 1,
 	class: 'group10'
 },
 {
-	prompt: 'I would rather improvise than spend time coming up with a detailed plan',
+	prompt: 'Ein niedriger Stromverbrauch (z.B. für Batteriebetrieb) ist',
 	weight: 1,
 	class: 'group11'
 }
@@ -77,9 +77,9 @@ var prompts = [
 // The stronger agreeance/disagreeance, the higher the weight on the user's answer to the prompt.
 var prompt_values = [
 {
-	value: 'Ausschlaggebend',
+	value: 'Unverzichtbar',
 	class: 'btn-default btn-strongly-agree border-success rounded',
-	weight: 5
+	weight: 10000
 },
 {
 	value: 'Bedeutend',
