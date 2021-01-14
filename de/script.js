@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-13T20:40:12+01:00
+ * @Last modified time: 2021-01-14T20:34:37+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -195,8 +195,10 @@ $('.value-btn').mousedown(function () {
 	var classArr = classList.split(" ");
 	// console.log(classArr); // DEBUG
 	var this_group = classArr[0];
-	// console.log(this_group); // DEBUG
-
+	//console.log(this_group); // DEBUG
+	//if (this_group == 0) {
+	//	console.log(total);
+	//}
 	// If button is already selected, de-select it when clicked and subtract any previously added values to the total
 	// Otherwise, de-select any selected buttons in group and select the one just clicked
 	// And subtract deselected weighted value and add the newly selected weighted value to the total
@@ -214,7 +216,6 @@ $('.value-btn').mousedown(function () {
 		$(this).addClass('active');
 		total += (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $(this).text()));
 	}
-
 	console.log(total);
 })
 
