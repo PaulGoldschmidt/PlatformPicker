@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-14T20:34:37+01:00
+ * @Last modified time: 2021-01-15T20:49:59+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -160,7 +160,7 @@ createValueButtons();
 
 // Keep a running total of the values they have selected.
 // Calculation will sum all of the answers to the prompts using weight of the value * the weight of the prompt.
-var total = 0;
+let answers = {};
 
 // Get the weight associated to group number
 function findPromptWeight(prompts, group) {
@@ -204,19 +204,17 @@ $('.value-btn').mousedown(function () {
 	// And subtract deselected weighted value and add the newly selected weighted value to the total
 	if($(this).hasClass('active')) {
 		$(this).removeClass('active');
-		total -= (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $(this).text()));
+		delete answers[this_group];
 	} else {
 		// $('[class='thisgroup).prop('checked', false);
-		total -= (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $('.'+this_group+'.active').text()));
 		// console.log($('.'+this_group+'.active').text());
 		$('.'+this_group).removeClass('active');
 
 		// console.log('group' + findValueWeight(prompt_values, $('.'+this_group).text()));
 		// $(this).prop('checked', true);
 		$(this).addClass('active');
-		total += (findPromptWeight(prompts, this_group) * findValueWeight(prompt_values, $(this).text()));
+		answers[this_group] = $(this).text();
 	}
-	console.log(total);
 })
 
 
@@ -226,13 +224,24 @@ $('#submit-btn').click(function () {
 	// For each group, find the value that is active
 	$('.results').removeClass('hide');
 	$('.results').addClass('show');
-
+	const valWeightTrigger = 5000; //the score, which has to be overshot if the individual group check should pick a specific platform.
+	let total = 0;
+	for (let this_group in answers) {
+		const answer = answers[this_group];
+		const promptWeight = findPromptWeight(prompts, this_group);
+		const valueWeight = findValueWeight(prompt_values, answer);
+		total += promptWeight * valueWeight;
+		if (this_group === 'group0' && valueWeight >= valWeightTrigger) { // Indivdual check, if any group has a score above the definded valWeightTrigger.
+			alert('Bist du blank? -> ' + answer + ' -> scheinbar ja');
+		}
+	}
+	alert(total);
 	if (total < 0) {
 		window.document.location.href = "boards/arduino/nano";
 	} else if (total > 0) {
 		window.document.location.href = "boards/arduino/nano";
 	} else {
-		window.document.location.href = "boards/arduino/nano";
+		window.document.location.href = "boards/arduino/mega2560";
 	}
 
 	// Hide the quiz after they submit their results
