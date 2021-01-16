@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-15T20:49:59+01:00
+ * @Last modified time: 2021-01-15T21:13:17+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -217,7 +217,18 @@ $('.value-btn').mousedown(function () {
 	}
 })
 
-
+var q0os = false; // creating individual storage points for the overshot values
+var q1os = false;
+var q2os = false;
+var q3os = false;
+var q4os = false;
+var q5os = false;
+var q6os = false;
+var q7os = false;
+var q8os = false;
+var q9os = false;
+var q10os = false;
+var q11os = false;
 
 $('#submit-btn').click(function () {
 	// After clicking submit, add up the totals from answers
@@ -232,10 +243,54 @@ $('#submit-btn').click(function () {
 		const valueWeight = findValueWeight(prompt_values, answer);
 		total += promptWeight * valueWeight;
 		if (this_group === 'group0' && valueWeight >= valWeightTrigger) { // Indivdual check, if any group has a score above the definded valWeightTrigger.
-			alert('Bist du blank? -> ' + answer + ' -> scheinbar ja');
+			q0os = true;
+			console.log("Changed value of q0os to " + q0os + ".");
+		}
+		if (this_group === 'group1' && valueWeight >= valWeightTrigger) {
+			q1os = true;
+			console.log("Changed value of q1os to " + q1os + ".");
+		}
+		if (this_group === 'group2' && valueWeight >= valWeightTrigger) {
+			q2os = true;
+			console.log("Changed value of q2os to " + q1os + ".");
+		}
+		if (this_group === 'group3' && valueWeight >= valWeightTrigger) {
+			q3os = true;
+			console.log("Changed value of q3os to " + q1os + ".");
+		}
+		if (this_group === 'group4' && valueWeight >= valWeightTrigger) {
+			q4os = true;
+			console.log("Changed value of q4os to " + q1os + ".");
+		}
+		if (this_group === 'group5' && valueWeight >= valWeightTrigger) {
+			q5os = true;
+			console.log("Changed value of q5os to " + q1os + ".");
+		}
+		if (this_group === 'group6' && valueWeight >= valWeightTrigger) {
+			q6os = true;
+			console.log("Changed value of q6os to " + q1os + ".");
+		}
+		if (this_group === 'group7' && valueWeight >= valWeightTrigger) {
+			q7os = true;
+			console.log("Changed value of q7os to " + q1os + ".");
+		}
+		if (this_group === 'group8' && valueWeight >= valWeightTrigger) {
+			q8os = true;
+			console.log("Changed value of q8os to " + q1os + ".");
+		}
+		if (this_group === 'group9' && valueWeight >= valWeightTrigger) {
+			q9os = true;
+			console.log("Changed value of q9os to " + q1os + ".");
+		}
+		if (this_group === 'group10' && valueWeight >= valWeightTrigger) {
+			q10os = true;
+			console.log("Changed value of q10os to " + q1os + ".");
+		}
+		if (this_group === 'group11' && valueWeight >= valWeightTrigger) {
+			q11os = true;
+			console.log("Changed value of q11os to " + q1os + ".");
 		}
 	}
-	alert(total);
 	if (total < 0) {
 		window.document.location.href = "boards/arduino/nano";
 	} else if (total > 0) {
