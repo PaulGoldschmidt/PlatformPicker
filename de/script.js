@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-15T21:13:17+01:00
+ * @Last modified time: 2021-01-18T22:13:29+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -291,12 +291,12 @@ $('#submit-btn').click(function () {
 			console.log("Changed value of q11os to " + q1os + ".");
 		}
 	}
-	if (total < 0) {
-		window.document.location.href = "boards/arduino/nano";
+	if (total < 0 || q5os === true) {
+		window.document.location.href = "boards/arduino/mega2560";
 	} else if (total > 0) {
 		window.document.location.href = "boards/arduino/nano";
 	} else {
-		window.document.location.href = "boards/arduino/mega2560";
+		window.document.location.href = "boards/arduino/nano";
 	}
 
 	// Hide the quiz after they submit their results
