@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-18T22:13:29+01:00
+ * @Last modified time: 2021-01-22T23:10:39+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -31,7 +31,7 @@ var prompts = [
 	class: 'group3'
 },
 {
-	prompt: 'Die Größe des Entwicklungsboards ist',
+	prompt: 'Die geringe Größe des Entwicklungsboards ist',
 	weight: 1,
 	class: 'group4'
 },
@@ -67,6 +67,11 @@ var prompts = [
 },
 {
 	prompt: 'Ein niedriger Stromverbrauch (z.B. für Batteriebetrieb) ist',
+	weight: 1,
+	class: 'group11'
+},
+{
+	prompt: 'Das Entwicklungsboard soll sich als Maus/Tastatur ausgeben können (z.B. für Spielecontroller-Projekte)',
 	weight: 1,
 	class: 'group11'
 }
@@ -229,6 +234,7 @@ var q8os = false;
 var q9os = false;
 var q10os = false;
 var q11os = false;
+var q12os = false;
 
 $('#submit-btn').click(function () {
 	// After clicking submit, add up the totals from answers
@@ -252,51 +258,102 @@ $('#submit-btn').click(function () {
 		}
 		if (this_group === 'group2' && valueWeight >= valWeightTrigger) {
 			q2os = true;
-			console.log("Changed value of q2os to " + q1os + ".");
+			console.log("Changed value of q2os to " + q2os + ".");
 		}
 		if (this_group === 'group3' && valueWeight >= valWeightTrigger) {
 			q3os = true;
-			console.log("Changed value of q3os to " + q1os + ".");
+			console.log("Changed value of q3os to " + q3os + ".");
 		}
 		if (this_group === 'group4' && valueWeight >= valWeightTrigger) {
 			q4os = true;
-			console.log("Changed value of q4os to " + q1os + ".");
+			console.log("Changed value of q4os to " + q4os + ".");
 		}
 		if (this_group === 'group5' && valueWeight >= valWeightTrigger) {
 			q5os = true;
-			console.log("Changed value of q5os to " + q1os + ".");
+			console.log("Changed value of q5os to " + q5os + ".");
 		}
 		if (this_group === 'group6' && valueWeight >= valWeightTrigger) {
 			q6os = true;
-			console.log("Changed value of q6os to " + q1os + ".");
+			console.log("Changed value of q6os to " + q6os + ".");
 		}
 		if (this_group === 'group7' && valueWeight >= valWeightTrigger) {
 			q7os = true;
-			console.log("Changed value of q7os to " + q1os + ".");
+			console.log("Changed value of q7os to " + q7os + ".");
 		}
 		if (this_group === 'group8' && valueWeight >= valWeightTrigger) {
 			q8os = true;
-			console.log("Changed value of q8os to " + q1os + ".");
+			console.log("Changed value of q8os to " + q8os + ".");
 		}
 		if (this_group === 'group9' && valueWeight >= valWeightTrigger) {
 			q9os = true;
-			console.log("Changed value of q9os to " + q1os + ".");
+			console.log("Changed value of q9os to " + q9os + ".");
 		}
 		if (this_group === 'group10' && valueWeight >= valWeightTrigger) {
 			q10os = true;
-			console.log("Changed value of q10os to " + q1os + ".");
+			console.log("Changed value of q10os to " + q10os + ".");
 		}
 		if (this_group === 'group11' && valueWeight >= valWeightTrigger) {
 			q11os = true;
-			console.log("Changed value of q11os to " + q1os + ".");
+			console.log("Changed value of q11os to " + q11os + ".");
+		}
+		if (this_group === 'group12' && valueWeight >= valWeightTrigger) {
+			q12os = true;
+			console.log("Changed value of q12os to " + q12os + ".");
 		}
 	}
-	if (total < 0 || q5os === true) {
+	if (q0os === true) {
+		window.document.location.href = "boards/arduino/nano";
+	}
+	else if (q1os === true) {
+			window.document.location.href = "boards/arduino/uno";
+	}
+	else if (q2os === true) {
+			window.document.location.href = "boards/raspberrypi/b-series/3+";
+	}
+	else if (q3os === true) {
+			window.document.location.href = "boards/miscellaneous/Teensy/40";
+	}
+	else if (q4os === true) {
+			window.document.location.href = "boards/arduino/promini";
+	}
+	else if (q5os === true) {
+			window.document.location.href = "boards/arduino/mega2560pro";
+	}
+	else if (q6os === true) {
+			window.document.location.href = "boards/miscellaneous/Teensy/40";
+	}
+	else if (q7os === true) {
+			window.document.location.href = "boards/raspberrypi/zero-series/zerow_wh";
+	}
+	else if (q8os === true) {
+			window.document.location.href = "boards/miscellaneous/NodeMCU/V2";
+	}
+	else if (q9os === true) {
+			window.document.location.href = "boards/arduino/nano";
+	}
+	else if (q10os === true) {
+			window.document.location.href = "boards/arduino/mega2560";
+	}
+	else if (q11os === true) {
+			window.document.location.href = "boards/arduino/promini";
+	}
+	else if (q12os === true) {
+			window.document.location.href = "boards/arduino/leonardo";
+	}
+	else if (total >= -10) {
+		window.document.location.href = "boards/arduino/nano";
+	}
+	else if (total >= 0) {
+		window.document.location.href = "boards/arduino/zero";
+	}
+	else if (total >= 10) {
 		window.document.location.href = "boards/arduino/mega2560";
-	} else if (total > 0) {
-		window.document.location.href = "boards/arduino/nano";
-	} else {
-		window.document.location.href = "boards/arduino/nano";
+	}
+	else if (total <= 10) {
+		window.document.location.href = "boards/raspberrypi/b-series/4";
+	}
+	else {
+		window.document.location.href = "boards/raspberrypi/b-series/4";
 	}
 
 	// Hide the quiz after they submit their results
