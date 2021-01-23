@@ -11,22 +11,22 @@
 // The questions which should be answered; theoretically we could outsource the data to a JSON-File, but for so little questions it is not a problem to store them completly here
 var prompts = [
 {
-	prompt: 'Ein niedriger Preis ist für das Projekt ist',
+	prompt: 'Ein niedriger Preis für das Projekt ist',
 	weight: 1,
 	class: 'group0'
 },
 {
-	prompt: 'Dass die Plattform einsteigerfreundlich (z.B. gute Dokumentation, einfach zu erlernende Programmiersprache) ist, ist',
+	prompt: 'Dass die Plattform einsteigerfreundlich ist (z.B. gute Dokumentation, einfach zu erlernende Programmiersprache), ist',
 	weight: 1,
 	class: 'group1'
 },
 {
-	prompt: 'Das eine grafische Ausgabe über einen Monitor/Fernseher/Beamer realisiert werden kann, ist',
+	prompt: 'Dass eine grafische Ausgabe über einen Monitor/Fernseher/Beamer realisiert werden kann, ist',
 	weight: 1,
 	class: 'group2'
 },
 {
-	prompt: 'Das Projekt benötigt viel Speicherplatz (Arbeitsspeicher und Programmspeicher) für Programme und Grafiken',
+	prompt: 'Das Projekt benötigt viel Speicherplatz (Arbeitsspeicher und Programmspeicher) für Programme und Grafiken:',
 	weight: 1,
 	class: 'group3'
 },
@@ -36,17 +36,17 @@ var prompts = [
 	class: 'group4'
 },
 {
-	prompt: 'Viele (analoge- und/oder digitale-) Ein- und Ausgänge sind für das Projekt:',
+	prompt: 'Viele (analoge und/oder digitale) Ein- und Ausgänge sind für das Projekt',
 	weight: 1,
 	class: 'group5'
 },
 {
-	prompt: 'Eine hohe analoge Auflösung der analogen Eingänge ist für das Projekt:',
+	prompt: 'Eine hohe Auflösung der analogen Eingänge ist für das Projekt',
 	weight: 1,
 	class: 'group6'
 },
 {
-	prompt: 'Eine Kamera muss an das Projekt angeschlossen werden:',
+	prompt: 'Eine Kamera muss an das Entwicklungsboard angeschlossen werden:',
 	weight: 1,
 	class: 'group7'
 },
@@ -56,7 +56,7 @@ var prompts = [
 	class: 'group8'
 },
 {
-	prompt: 'Das Board sollte Breadboardkompatibel sein',
+	prompt: 'Das Board sollte Breadboardkompatibel sein:',
 	weight: 1,
 	class: 'group9'
 },
@@ -71,7 +71,7 @@ var prompts = [
 	class: 'group11'
 },
 {
-	prompt: 'Das Entwicklungsboard soll sich als Maus/Tastatur ausgeben können (z.B. für Spielecontroller-Projekte)',
+	prompt: 'Das Entwicklungsboard soll sich als Maus/Tastatur ausgeben können (z.B. für Spielecontroller-Projekte):',
 	weight: 1,
 	class: 'group11'
 }
