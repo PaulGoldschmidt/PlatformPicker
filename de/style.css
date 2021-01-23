@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-08T22:03:04+01:00
+ * @Last modified time: 2021-01-23T10:35:02+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -106,4 +106,13 @@ html body.h-100.text-center.text-white.bg-dark div.container.text-center ul#quiz
 .results {
 	margin-bottom: 40px;
 	margin-top: 40px;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }

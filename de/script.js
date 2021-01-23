@@ -1,6 +1,6 @@
 /**
  * @Date:   2021-01-07T20:24:24+01:00
- * @Last modified time: 2021-01-22T23:10:39+01:00
+ * @Last modified time: 2021-01-23T10:33:33+01:00
  * @Copyright: Copyright 2020, Heidelberg (Germany)
  */
 
@@ -96,7 +96,7 @@ var prompt_values = [
 	weight: 0
 },
 {
-	value: 'Weniger wichtig',
+	value: 'Weniger\xa0wichtig', //\xa0
 	class: 'btn-default btn-disagree border-danger rounded',
 	weight: -3
 },
